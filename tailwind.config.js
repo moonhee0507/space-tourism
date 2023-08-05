@@ -12,6 +12,7 @@ module.exports = {
                 "gradient-conic":
                     "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
                 home: "url('/images/bg-home.png')",
+                destination: "url('/images/bg-destination.png')",
             },
             colors: {
                 "light-purple": "#d0d6f9",

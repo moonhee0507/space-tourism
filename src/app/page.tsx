@@ -1,27 +1,11 @@
 import Link from "next/link";
+import Header from "./components/Header";
 
 export default function Home() {
     return (
         <div className="w-screen h-screen bg-cover bg-home">
             <div className="px-[24px] pt-[25px]">
-                <header className="flex justify-between bg-transparent">
-                    <h1>
-                        <a href="/">
-                            <img
-                                src="/images/logo.svg"
-                                alt="logo"
-                                className="w-[40px] h-[40px]"
-                            />
-                        </a>
-                    </h1>
-                    <button type="button">
-                        <img
-                            src="/images/icon-menu.svg"
-                            alt="menu"
-                            className="w-[24px] h-[21px]"
-                        />
-                    </button>
-                </header>
+                <Header />
                 <main>
                     <section className="flex flex-col gap-4 text-center pt-[48px] pb-[81px]">
                         <h2 className="sr-only">Main Phrases</h2>
