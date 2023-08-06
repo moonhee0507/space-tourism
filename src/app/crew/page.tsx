@@ -1,17 +1,15 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "../components/Header";
-import InfoSection from "./components/InfoSection";
-import { Destination } from "./types";
+import { Crew } from "./types";
+import InfoSection from "./InfoSection";
 
-export default function Destination() {
-    const [destinations, setDestinations] = useState<Destination[]>([]);
+export default function page() {
+    const [crews, setCrews] = useState<Crew[]>([]);
 
     useEffect(() => {
-        const getDestinationData: () => Promise<
-            Destination | Error
-        > = async () => {
+        const getCrewData: () => Promise<Crew | Error> = async () => {
             const res = await fetch(`/data.json`, {
                 headers: {
                     "Cache-Control": "max-age=31536000",
@@ -19,13 +17,17 @@ export default function Destination() {
             });
             const data = await res.json();
 
-            return data.destinations;
+            return data.crew;
         };
 
-        getDestinationData().then((data) => {
-            if (Array.isArray(data)) setDestinations(data);
+        getCrewData().then((data) => {
+            if (Array.isArray(data)) setCrews(data);
         });
     }, []);
+
+    useEffect(() => {
+        console.log(crews);
+    }, [crews]);
 
     return (
         <div className="w-screen h-screen bg-cover bg-destination">
@@ -33,10 +35,10 @@ export default function Destination() {
                 <Header />
                 <main className="mt-[24px]">
                     <h2 className="barlow-condensed not-italic font-normal leading-normal tracking-[2.7px] uppercase flex justify-center gap-[18px]">
-                        <span className="font-bold opacity-25">01</span>
-                        <p>Pick your destination</p>
+                        <span className="font-bold opacity-25">02</span>
+                        <p>Meet your crew</p>
                     </h2>
-                    <InfoSection destinations={destinations} />
+                    <InfoSection crews={crews} />
                 </main>
             </div>
         </div>

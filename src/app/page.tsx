@@ -4,7 +4,7 @@ import Header from "./components/Header";
 export default function Home() {
     return (
         <div className="w-screen h-screen bg-cover bg-home">
-            <div className="px-[24px] pt-[25px]">
+            <div className="px-[24px] py-[25px]">
                 <Header />
                 <main>
                     <section className="flex flex-col gap-4 text-center pt-[48px] pb-[81px]">

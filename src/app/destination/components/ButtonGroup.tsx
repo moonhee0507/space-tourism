@@ -1,10 +1,4 @@
-import {
-    Dispatch,
-    MouseEvent,
-    SetStateAction,
-    useEffect,
-    useState,
-} from "react";
+import { Dispatch, MouseEvent, SetStateAction } from "react";
 import { DestinationName } from "../types";
 
 const ButtonGroup = ({
@@ -17,6 +11,7 @@ const ButtonGroup = ({
     const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
         const button = e.target as HTMLButtonElement;
         setDestination(button.value as DestinationName);
+        window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
     return (
