@@ -25,6 +25,12 @@ body {
     background-color: #0b0d17;
     min-height: 100vh;
     color: #ffffff;
+    -ms-overflow-style: none; /* 인터넷 익스플로러 */
+    scrollbar-width: none; /* 파이어폭스 */
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 .barlow-condensed {
