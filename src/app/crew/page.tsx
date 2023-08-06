@@ -5,7 +5,7 @@ import Header from "../components/Header";
 import { Crew } from "./types";
 import InfoSection from "./components/InfoSection";
 
-export default function page() {
+export default function Crew() {
     const [crews, setCrews] = useState<Crew[]>([]);
 
     useEffect(() => {
@@ -30,7 +30,7 @@ export default function page() {
     }, [crews]);
 
     return (
-        <div className="w-screen h-screen bg-cover bg-crew">
+        <div className="w-screen h-screen overflow-x-hidden bg-cover bg-crew page-std">
             <div className="px-[24px] py-[25px]">
                 <Header />
                 <main className="mt-[24px]">

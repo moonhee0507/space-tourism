@@ -28,7 +28,7 @@ export default function Destination() {
     }, []);
 
     return (
-        <div className="w-screen h-screen bg-cover bg-destination">
+        <div className="w-screen h-screen overflow-x-hidden bg-cover bg-destination page-std">
             <div className="px-[24px] py-[25px]">
                 <Header />
                 <main className="mt-[24px]">

@@ -23,11 +23,11 @@ html {
 
 body {
     background-color: #0b0d17;
+    width: 100vw;
     min-height: 100vh;
     color: #ffffff;
     -ms-overflow-style: none; /* 인터넷 익스플로러 */
     scrollbar-width: none; /* 파이어폭스 */
-    overflow: hidden;
 }
 
 body::-webkit-scrollbar {

@@ -5,7 +5,7 @@ import Header from "../components/Header";
 import { Technology } from "./types";
 import InfoSection from "./components/InfoSection";
 
-export default function Page() {
+export default function Technology() {
     const [technologies, setTechnologies] = useState<Technology[]>([]);
 
     useEffect(() => {
@@ -28,7 +28,7 @@ export default function Page() {
     }, []);
 
     return (
-        <div className="w-screen h-screen bg-cover bg-technology">
+        <div className="w-screen h-screen overflow-x-hidden bg-cover bg-technology page-std">
             <div className="px-[24px] py-[25px]">
                 <Header />
                 <main className="mt-[24px]">

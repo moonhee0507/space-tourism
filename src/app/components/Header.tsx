@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, Dispatch, SetStateAction } from "react";
+import { useState, useEffect, Dispatch, SetStateAction, useRef } from "react";
 import Link from "next/link";
 
 const Header = () => {
@@ -8,6 +8,19 @@ const Header = () => {
     const handleClick = () => {
         setOnMobileMenu((prev) => !prev);
     };
+
+    useEffect(() => {
+        const page = document.querySelector(".page-std") as HTMLDivElement;
+        if (page) {
+            page.style.overflowY = "hidden";
+        }
+
+        if (!onMobileMenu) {
+            if (page) {
+                page.style.overflowY = "visible";
+            }
+        }
+    }, [onMobileMenu]);
 
     return (
         <>
@@ -28,6 +41,7 @@ const Header = () => {
                         className="w-[24px] h-[21px]"
                     />
                 </button>
+
                 <Menubar
                     onMobileMenu={onMobileMenu}
                     setOnMobileMenu={setOnMobileMenu}
@@ -47,16 +61,17 @@ const Menubar = ({
     setOnMobileMenu: Dispatch<SetStateAction<boolean>>;
 }) => {
     const [currentPath, setCurrentPath] = useState("");
+
     useEffect(() => {
         setCurrentPath(window.location.pathname);
     }, []);
 
     return (
         <nav
-            className={`absolute top-[-25px] h-[100vh] pt-[32px] pl-[32px] pr-[27px] z-10 backdrop-blur-[40.774227142333984px] bg-[rgba(255,255,255,.04)] ${
+            className={`absolute top-[-25px] pt-[32px] pl-[32px] pr-[27px] z-10 backdrop-blur-[40.774227142333984px] bg-[rgba(255,255,255,.04)] h-[100vh] ${
                 onMobileMenu
-                    ? "right-[-24px] duration-[1s] transition-[right]"
-                    : "right-[-295px] duration-[1s] transition-[right]"
+                    ? "right-[-24px] duration-[1s] transition-[right,display]"
+                    : "right-[-295px] duration-[1s] transition-[right,display]"
             }`}
         >
             <div className="flex justify-end mb-[65px]">

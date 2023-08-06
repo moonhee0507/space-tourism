@@ -3,7 +3,7 @@ import Header from "./components/Header";
 
 export default function Home() {
     return (
-        <div className="w-screen h-screen bg-cover bg-home">
+        <div className="w-screen h-screen overflow-x-hidden bg-cover bg-home page-std">
             <div className="px-[24px] py-[25px]">
                 <Header />
                 <main>
