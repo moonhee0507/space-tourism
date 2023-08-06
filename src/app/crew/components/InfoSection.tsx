@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Crew } from "./types";
-import BulletGroup from "./components/BulletGroup";
+import { Crew } from "../types";
+import BulletGroup from "./BulletGroup";
 
 const InfoSection = ({ crews }: { crews: Crew[] }) => {
     const [crewIdx, setCrewIdx] = useState<number>(0);
@@ -18,7 +18,7 @@ const InfoSection = ({ crews }: { crews: Crew[] }) => {
 
     return (
         <section>
-            <h3 className="sr-only">Destination Information</h3>
+            <h3 className="sr-only">Crew Information</h3>
             {data && (
                 <>
                     <div className="h-[222px] w-full box-content border-b-[#383b4b] border-b border-solid my-[32px]">

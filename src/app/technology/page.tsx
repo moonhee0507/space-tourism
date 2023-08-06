@@ -2,14 +2,16 @@
 
 import { useState, useEffect } from "react";
 import Header from "../components/Header";
-import { Crew } from "./types";
+import { Technology } from "./types";
 import InfoSection from "./components/InfoSection";
 
-export default function page() {
-    const [crews, setCrews] = useState<Crew[]>([]);
+export default function Page() {
+    const [technologies, setTechnologies] = useState<Technology[]>([]);
 
     useEffect(() => {
-        const getCrewData: () => Promise<Crew | Error> = async () => {
+        const getTechnologyData: () => Promise<
+            Technology | Error
+        > = async () => {
             const res = await fetch(`/data.json`, {
                 headers: {
                     "Cache-Control": "max-age=31536000",
@@ -17,28 +19,24 @@ export default function page() {
             });
             const data = await res.json();
 
-            return data.crew;
+            return data.technology;
         };
 
-        getCrewData().then((data) => {
-            if (Array.isArray(data)) setCrews(data);
+        getTechnologyData().then((data) => {
+            if (Array.isArray(data)) setTechnologies(data);
         });
     }, []);
 
-    useEffect(() => {
-        console.log(crews);
-    }, [crews]);
-
     return (
-        <div className="w-screen h-screen bg-cover bg-crew">
+        <div className="w-screen h-screen bg-cover bg-technology">
             <div className="px-[24px] py-[25px]">
                 <Header />
                 <main className="mt-[24px]">
                     <h2 className="barlow-condensed not-italic font-normal leading-normal tracking-[2.7px] uppercase flex justify-center gap-[18px]">
-                        <span className="font-bold opacity-25">02</span>
-                        <p>Meet your crew</p>
+                        <span className="font-bold opacity-25">03</span>
+                        <p>Space launch 101</p>
                     </h2>
-                    <InfoSection crews={crews} />
+                    <InfoSection technologies={technologies} />
                 </main>
             </div>
         </div>
