@@ -4,10 +4,10 @@ import Header from "./components/Header";
 export default function Home() {
     return (
         <div className="w-screen h-screen overflow-x-hidden bg-cover bg-home-mobile page-std md:bg-home-tablet">
-            <div className="px-[24px] py-[25px]">
+            <div className="px-[24px] py-[25px] md:px-[39px]">
                 <Header />
                 <main>
-                    <section className="flex flex-col gap-4 items-center text-center pt-[48px] pb-[81px] md:gap-[24px]">
+                    <section className="flex flex-col gap-4 items-center text-center pt-[48px] pb-[81px] md:gap-[24px] md:pt-[130px]">
                         <h2 className="sr-only">Main Phrases</h2>
                         <p className="barlow-condensed text-base not-italic font-normal leading-[normal] tracking-[2.7px] text-light-purple md:text-[20px] md:tracking-[3.375px]">
                             SO, YOU WANT TO TRAVEL TO
@@ -25,7 +25,7 @@ export default function Home() {
                     </section>
                     <Link
                         href="/destination"
-                        className="block mx-auto my-0 bg-white rounded-full text-center w-[150px] h-[150px] text-space text-xl not-italic font-normal leading-[150px] tracking-[1.25px] md:w-[242px] md:h-[242px] md:text-[32px] md:leading-[242px] md:tracking-[2px]"
+                        className="absolute left-2/4 -translate-x-2/4 bottom-[48px] md:bottom-[90px] bg-white rounded-full text-center w-[150px] h-[150px] text-space text-xl not-italic font-normal leading-[150px] tracking-[1.25px] md:w-[242px] md:h-[242px] md:text-[32px] md:leading-[242px] md:tracking-[2px]"
                     >
                         EXPLORE
                     </Link>
