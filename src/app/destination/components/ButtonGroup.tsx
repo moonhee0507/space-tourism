@@ -14,16 +14,21 @@ const ButtonGroup = ({
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
+    const commonBtnStyle =
+        "uppercase tracking-[2.362px] barlow-condensed text-sm not-italic font-normal relative text-light-purple md:text-[16px] md:tracking-[2.7px] ";
+    const activeBtnStyle =
+        "text-white after:absolute after:content-[''] after:w-full after:h-[3px] after:left-[-1px] after:bottom-[-8px] after:bg-[white] md:after:bottom-[-12px]";
+
     return (
         <div className="flex gap-[26px] justify-center">
             <button
                 type="button"
                 value="Moon"
                 onClick={handleClick}
-                className={`uppercase tracking-[2.362px] barlow-condensed text-sm not-italic font-normal relative ${
-                    destination === "Moon" &&
-                    "after:absolute after:content-[''] after:w-full after:h-[3px] after:left-[-1px] after:bottom-[-8px] after:bg-[white]"
-                }`}
+                className={
+                    commonBtnStyle +
+                    `${destination === "Moon" && activeBtnStyle}`
+                }
             >
                 Moon
             </button>
@@ -31,10 +36,10 @@ const ButtonGroup = ({
                 type="button"
                 value="Mars"
                 onClick={handleClick}
-                className={`uppercase tracking-[2.362px] barlow-condensed text-sm not-italic font-normal relative ${
-                    destination === "Mars" &&
-                    "after:absolute after:content-[''] after:w-full after:h-[3px] after:left-[-1px] after:bottom-[-8px] after:bg-[white]"
-                }`}
+                className={
+                    commonBtnStyle +
+                    `${destination === "Mars" && activeBtnStyle}`
+                }
             >
                 Mars
             </button>
@@ -42,10 +47,10 @@ const ButtonGroup = ({
                 type="button"
                 value="Europa"
                 onClick={handleClick}
-                className={`uppercase tracking-[2.362px] barlow-condensed text-sm not-italic font-normal relative ${
-                    destination === "Europa" &&
-                    "after:absolute after:content-[''] after:w-full after:h-[3px] after:left-[-1px] after:bottom-[-8px] after:bg-[white]"
-                }`}
+                className={
+                    commonBtnStyle +
+                    `${destination === "Europa" && activeBtnStyle}`
+                }
             >
                 Europa
             </button>
@@ -53,10 +58,10 @@ const ButtonGroup = ({
                 type="button"
                 value="Titan"
                 onClick={handleClick}
-                className={`uppercase tracking-[2.362px] barlow-condensed text-sm not-italic font-normal relative ${
-                    destination === "Titan" &&
-                    "after:absolute after:content-[''] after:w-full after:h-[3px] after:left-[-1px] after:bottom-[-8px] after:bg-[white]"
-                }`}
+                className={
+                    commonBtnStyle +
+                    `${destination === "Titan" && activeBtnStyle}`
+                }
             >
                 Titan
             </button>

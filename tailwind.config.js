@@ -13,7 +13,9 @@ module.exports = {
                     "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
                 "home-mobile": "url('/images/bg-home.png')",
                 "home-tablet": "url('/images/bg-home-tablet.png')",
-                destination: "url('/images/bg-destination.png')",
+                "destination-mobile": "url('/images/bg-destination.png')",
+                "destination-tablet":
+                    "url('/images/bg-destination-tablet.png')",
                 crew: "url('/images/bg-crew.png')",
                 technology: "url('/images/bg-technology.png')",
             },

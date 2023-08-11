@@ -31,7 +31,7 @@ export default function Crew() {
 
     return (
         <div className="w-screen h-screen overflow-x-hidden bg-cover bg-crew page-std">
-            <div className="px-[24px] py-[25px]">
+            <div className="px-[24px] py-[25px] md:px-[39px]">
                 <Header />
                 <main className="mt-[24px]">
                     <h2 className="barlow-condensed not-italic font-normal leading-normal tracking-[2.7px] uppercase flex justify-center gap-[18px]">
