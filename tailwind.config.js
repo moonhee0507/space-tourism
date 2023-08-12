@@ -13,6 +13,7 @@ module.exports = {
                     "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
                 "home-mobile": "url('/images/bg-home.png')",
                 "home-tablet": "url('/images/bg-home-tablet.png')",
+                "home-desktop": "url('/images/bg-home-desktop.png')",
                 "destination-mobile": "url('/images/bg-destination.png')",
                 "destination-tablet":
                     "url('/images/bg-destination-tablet.png')",
@@ -24,6 +25,9 @@ module.exports = {
             colors: {
                 "light-purple": "#d0d6f9",
                 space: "#0b0d17",
+            },
+            screens: {
+                desktop: "1440px",
             },
         },
     },

@@ -3,8 +3,8 @@ import Header from "./components/Header";
 
 export default function Home() {
     return (
-        <div className="w-screen h-screen overflow-x-hidden bg-cover bg-home-mobile page-std md:bg-home-tablet">
-            <div className="px-[24px] py-[25px] md:px-[39px]">
+        <div className="w-screen h-screen overflow-x-hidden bg-cover bg-home-mobile page-std md:bg-home-tablet desktop:bg-home-desktop">
+            <div className="px-[24px] py-[25px] md:px-[39px] desktop:px-[55px] desktop:py-[64px]">
                 <Header />
                 <main>
                     <section className="flex flex-col gap-4 items-center text-center pt-[48px] pb-[81px] md:gap-[24px] md:pt-[130px]">
