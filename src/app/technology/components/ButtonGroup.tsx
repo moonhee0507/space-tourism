@@ -24,7 +24,7 @@ const ButtonGroup = ({
                         technologyIdx === i
                             ? "bg-white border-white text-[#0B0D17]"
                             : "bg-transparent border-[rgba(255,255,255,.25)] text-white"
-                    }  rounded-full w-[40px] h-[40px] border`}
+                    }  rounded-full w-[40px] h-[40px] border md:w-[60px] md:h-[60px] md:text-[24px]`}
                     value={i + 1}
                     onClick={handleClick}
                 >

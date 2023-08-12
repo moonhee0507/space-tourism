@@ -18,7 +18,8 @@ module.exports = {
                     "url('/images/bg-destination-tablet.png')",
                 "crew-mobile": "url('/images/bg-crew.png')",
                 "crew-tablet": "url('/images/bg-crew-tablet.png')",
-                technology: "url('/images/bg-technology.png')",
+                "technology-mobile": "url('/images/bg-technology.png')",
+                "technology-tablet": "url('/images/bg-technology-tablet.png')",
             },
             colors: {
                 "light-purple": "#d0d6f9",
