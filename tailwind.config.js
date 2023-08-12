@@ -16,7 +16,8 @@ module.exports = {
                 "destination-mobile": "url('/images/bg-destination.png')",
                 "destination-tablet":
                     "url('/images/bg-destination-tablet.png')",
-                crew: "url('/images/bg-crew.png')",
+                "crew-mobile": "url('/images/bg-crew.png')",
+                "crew-tablet": "url('/images/bg-crew-tablet.png')",
                 technology: "url('/images/bg-technology.png')",
             },
             colors: {

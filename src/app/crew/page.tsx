@@ -30,11 +30,11 @@ export default function Crew() {
     }, [crews]);
 
     return (
-        <div className="w-screen h-screen overflow-x-hidden bg-cover bg-crew page-std">
-            <div className="px-[24px] py-[25px] md:px-[39px]">
+        <div className="w-screen h-screen overflow-x-hidden bg-cover bg-crew-mobile md:bg-crew-tablet page-std">
+            <div className="px-[24px] py-[25px] md:px-[39px] min-h-screen flex flex-col">
                 <Header />
-                <main className="mt-[24px]">
-                    <h2 className="barlow-condensed not-italic font-normal leading-normal tracking-[2.7px] uppercase flex justify-center gap-[18px]">
+                <main className="mt-[24px] md:mt-[calc(24px+40px)] flex flex-col flex-grow">
+                    <h2 className="barlow-condensed not-italic font-normal leading-normal tracking-[2.7px] uppercase flex justify-center gap-[18px] md:justify-start md:text-[20px] md:tracking-[3.375px]">
                         <span className="font-bold opacity-25">02</span>
                         <p>Meet your crew</p>
                     </h2>
