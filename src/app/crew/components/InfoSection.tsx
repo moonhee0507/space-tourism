@@ -17,7 +17,7 @@ const InfoSection = ({ crews }: { crews: Crew[] }) => {
     }, [crewIdx]);
 
     return (
-        <section className="md:flex md:flex-col md:flex-grow">
+        <section className="md:flex md:flex-col md:flex-grow desktop:flex-row desktop:justify-between">
             <h3 className="sr-only">Crew Information</h3>
             {data && (
                 <CrewContainer

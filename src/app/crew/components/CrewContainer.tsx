@@ -22,16 +22,22 @@ const CrewContainer = ({
 
     return (
         <>
-            {width < 768 ? (
-                <ImgArea src={data.images.webp} alt={data.name} />
-            ) : (
-                <TextArea role={data.role} name={data.name} bio={data.bio} />
-            )}
-            <BulletGroup
-                crews={crews}
-                crewIdx={crewIdx}
-                setCrewIdx={setCrewIdx}
-            />
+            <div className="desktop:flex desktop:flex-col">
+                {width < 768 ? (
+                    <ImgArea src={data.images.webp} alt={data.name} />
+                ) : (
+                    <TextArea
+                        role={data.role}
+                        name={data.name}
+                        bio={data.bio}
+                    />
+                )}
+                <BulletGroup
+                    crews={crews}
+                    crewIdx={crewIdx}
+                    setCrewIdx={setCrewIdx}
+                />
+            </div>
             {width < 768 ? (
                 <TextArea role={data.role} name={data.name} bio={data.bio} />
             ) : (
