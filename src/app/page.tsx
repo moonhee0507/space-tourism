@@ -15,7 +15,7 @@ export default function Home() {
                         <em className="text-white not-italic text-[80px] leading-[100px] font-normal md:text-[150px] md:leading-[150px]">
                             SPACE
                         </em>
-                        <p className="barlow text-light-purple text-[15px] not-italic leading-[25px] font-normal max-w-[444px] md:text-[16px] md:leading-[28px] desktop:text-[18px] desktop:leading-[32px]">
+                        <p className="barlow text-light-purple text-[15px] not-italic leading-[25px] font-normal max-w-[444px] md:text-[16px] md:leading-[28px] desktop:text-[18px] desktop:leading-[32px] desktop:text-left">
                             Let’s face it; if you want to go to space, you might
                             as well genuinely go to outer space and not hover
                             kind of on the edge of it. Well sit back, and relax
