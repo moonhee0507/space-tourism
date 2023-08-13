@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, Dispatch, SetStateAction, useRef } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Menubar from "./Menubar";
 
@@ -32,9 +32,14 @@ const Header = () => {
         "relative after:absolute after:content-[''] after:w-full after:h-[3px] after:-translate-x-2/4 after:bottom-[-39px] after:left-2/4 after:bg-white";
     const linkStyle =
         "barlow-condensed text-[14px] not-italic font-normal leading-normal tracking-[2.362px] uppercase desktop:text-[16px] desktop:tracking-[2.7px]";
+    const hoverStyle =
+        "hover:relative hover:after:absolute hover:after:content-[''] hover:after:w-full hover:after:h-[3px] hover:after:-translate-x-2/4 hover:after:bottom-[-39px] hover:after:left-2/4 hover:after:bg-[rgba(255,255,255,0.5)]";
 
     const MenuList = (path: string, idx: number) => (
-        <li className={currentPath === `/${path}` ? sudoElement : ""} key={idx}>
+        <li
+            className={currentPath === `/${path}` ? sudoElement : hoverStyle}
+            key={idx}
+        >
             <p className="barlow-condensed hidden desktop:inline desktop:mr-[11px] desktop:text-[16px] desktop:font-[700] desktop:tracking-[2.7px]">
                 {String(idx).padStart(2, "0")}
             </p>
