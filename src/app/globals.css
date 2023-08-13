@@ -41,3 +41,7 @@ body::-webkit-scrollbar {
 .barlow {
     font-family: var(--font-barlow);
 }
+
+.home-scroll {
+    overflow-y: hidden !important;
+}

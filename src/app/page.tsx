@@ -3,7 +3,7 @@ import MainButton from "./components/MainButton";
 
 export default function Home() {
     return (
-        <div className="w-screen h-screen overflow-x-hidden bg-cover bg-home-mobile page-std md:bg-home-tablet desktop:bg-home-desktop">
+        <div className="w-screen h-screen overflow-x-hidden bg-cover home-scroll bg-home-mobile page-std md:bg-home-tablet desktop:bg-home-desktop">
             <div className="px-[24px] py-[25px] md:px-[39px] desktop:px-[55px] desktop:py-[64px]">
                 <Header />
                 <main>
