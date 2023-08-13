@@ -18,16 +18,18 @@ const ButtonGroup = ({
         "uppercase tracking-[2.362px] barlow-condensed text-sm not-italic font-normal relative text-light-purple md:text-[16px] md:tracking-[2.7px] ";
     const activeBtnStyle =
         "text-white after:absolute after:content-[''] after:w-full after:h-[3px] after:left-[-1px] after:bottom-[-8px] after:bg-[white] md:after:bottom-[-12px]";
+    const hoverStyle =
+        "hover:after:absolute hover:after:content-[''] hover:after:w-full hover:after:h-[3px] hover:after:left-[-1px] hover:after:bottom-[-8px] hover:after:bg-[rgba(255,255,255,0.5021)] md:hover:after:bottom-[-12px]";
 
     return (
-        <div className="flex gap-[26px] justify-center">
+        <div className="flex gap-[26px] justify-center desktop:gap-[35px] desktop:justify-start">
             <button
                 type="button"
                 value="Moon"
                 onClick={handleClick}
                 className={
                     commonBtnStyle +
-                    `${destination === "Moon" && activeBtnStyle}`
+                    `${destination === "Moon" ? activeBtnStyle : hoverStyle}`
                 }
             >
                 Moon
@@ -38,7 +40,7 @@ const ButtonGroup = ({
                 onClick={handleClick}
                 className={
                     commonBtnStyle +
-                    `${destination === "Mars" && activeBtnStyle}`
+                    `${destination === "Mars" ? activeBtnStyle : hoverStyle}`
                 }
             >
                 Mars
@@ -49,7 +51,7 @@ const ButtonGroup = ({
                 onClick={handleClick}
                 className={
                     commonBtnStyle +
-                    `${destination === "Europa" && activeBtnStyle}`
+                    `${destination === "Europa" ? activeBtnStyle : hoverStyle}`
                 }
             >
                 Europa
@@ -60,7 +62,7 @@ const ButtonGroup = ({
                 onClick={handleClick}
                 className={
                     commonBtnStyle +
-                    `${destination === "Titan" && activeBtnStyle}`
+                    `${destination === "Titan" ? activeBtnStyle : hoverStyle}`
                 }
             >
                 Titan
