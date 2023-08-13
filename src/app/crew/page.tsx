@@ -25,10 +25,6 @@ export default function Crew() {
         });
     }, []);
 
-    useEffect(() => {
-        console.log(crews);
-    }, [crews]);
-
     return (
         <div className="w-screen h-screen overflow-x-hidden bg-cover bg-crew-mobile md:bg-crew-tablet page-std">
             <div className="px-[24px] py-[25px] md:px-[39px] min-h-screen flex flex-col">

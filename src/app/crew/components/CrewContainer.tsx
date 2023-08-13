@@ -1,8 +1,11 @@
+"use client";
+
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { Crew } from "../types";
 import BulletGroup from "./BulletGroup";
 import ImgArea from "./ImgArea";
 import TextArea from "./TextArea";
+import useResize from "@/app/useResize";
 
 const CrewContainer = ({
     data,
@@ -15,18 +18,7 @@ const CrewContainer = ({
     crewIdx: number;
     setCrewIdx: Dispatch<SetStateAction<number>>;
 }) => {
-    const [width, setWidth] = useState(window.innerWidth);
-
-    const handleResize = () => {
-        setWidth(window.innerWidth);
-    };
-
-    useEffect(() => {
-        window.addEventListener("resize", handleResize);
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
+    const width = useResize();
 
     return (
         <>

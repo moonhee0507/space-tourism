@@ -34,7 +34,7 @@ const Header = () => {
         "barlow-condensed text-[14px] not-italic font-normal leading-normal tracking-[2.362px] uppercase desktop:text-[16px] desktop:tracking-[2.7px]";
 
     const MenuList = (path: string, idx: number) => (
-        <li className={currentPath === `/${path}` ? sudoElement : ""}>
+        <li className={currentPath === `/${path}` ? sudoElement : ""} key={idx}>
             <p className="barlow-condensed hidden desktop:inline desktop:mr-[11px] desktop:text-[16px] desktop:font-[700] desktop:tracking-[2.7px]">
                 {String(idx).padStart(2, "0")}
             </p>
