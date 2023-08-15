@@ -14,7 +14,7 @@ const DestinationContainer = ({
     setDestination: Dispatch<SetStateAction<DestinationName>>;
 }) => {
     return (
-        <div className="desktop:flex desktop:mt-[64px]">
+        <div className="desktop:flex desktop:mt-[64px] desktop:justify-center desktop:gap-[100px]">
             <ImgArea src={data.images.webp} alt={data.name} />
             <div>
                 <ButtonGroup
