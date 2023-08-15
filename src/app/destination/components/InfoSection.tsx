@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Destination, DestinationName } from "../types";
-import ButtonGroup from "./ButtonGroup";
 import DestinationContainer from "./DestinationContainer";
 
 const InfoSection = ({ destinations }: { destinations: Destination[] }) => {

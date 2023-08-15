@@ -15,8 +15,10 @@ const ButtonGroup = ({
         setTechnologyIdx(Number(button.value) - 1);
     };
 
+    const hoverStyle = "";
+
     return (
-        <div className="flex gap-[16px] justify-center">
+        <div className="flex gap-[16px] justify-center desktop:flex-col desktop:justify-start desktop:gap-[32px] desktop:pt-[111px]">
             {technologies.map((_, i) => (
                 <button
                     type="button"
@@ -24,7 +26,7 @@ const ButtonGroup = ({
                         technologyIdx === i
                             ? "bg-white border-white text-[#0B0D17]"
                             : "bg-transparent border-[rgba(255,255,255,.25)] text-white"
-                    }  rounded-full w-[40px] h-[40px] border md:w-[60px] md:h-[60px] md:text-[24px]`}
+                    }  rounded-full w-[40px] h-[40px] border md:w-[60px] md:h-[60px] md:text-[24px] desktop:text-[32px] desktop:w-[80px] desktop:h-[80px] hover:border-white`}
                     value={i + 1}
                     onClick={handleClick}
                 >

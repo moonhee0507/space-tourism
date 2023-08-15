@@ -24,6 +24,8 @@ module.exports = {
                 "crew-desktop": "url('/images/bg-crew-desktop.png')",
                 "technology-mobile": "url('/images/bg-technology.png')",
                 "technology-tablet": "url('/images/bg-technology-tablet.png')",
+                "technology-desktop":
+                    "url('/images/bg-technology-desktop.png')",
             },
             colors: {
                 "light-purple": "#d0d6f9",
