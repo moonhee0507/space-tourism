@@ -18,8 +18,8 @@ const Menubar = ({
         <nav
             className={`md:hidden absolute top-[-25px] pt-[32px] pl-[32px] pr-[27px] z-10 backdrop-blur-[40.774227142333984px] bg-[rgba(255,255,255,.04)] h-[100vh] ${
                 onMobileMenu
-                    ? "right-[-24px] duration-[1s] transition-[right,display]"
-                    : "right-[-295px] duration-[1s] transition-[right,display]"
+                    ? "right-[-24px] duration-[300ms] transition-[right,display]"
+                    : "right-[-295px] duration-[300ms] transition-[right,display]"
             }`}
         >
             <div className="flex justify-end mb-[65px]">
